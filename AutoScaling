@@ -1,0 +1,11 @@
+You can use Auto Scaling to manage Amazon EC2 capacity automatically, maintain the right number of instances for your application, 
+operate a healthy group of instances, and scale it according to your needs
+
+You create collections of EC2 instances, called Auto Scaling groups
+You can specify the minimum number of instances in each Auto Scaling group, and Amazon EC2 Auto Scaling ensures that your group never 
+goes below this size. You can specify the maximum number of instances in each Auto Scaling group,and Amazon EC2 Auto Scaling ensures 
+that your group never goes above this size.
+
+If you specify scaling policies, then Amazon EC2 Auto Scaling can launch or terminate instances as demand on your application increases 
+or decreases.
+ 
