@@ -1,0 +1,38 @@
+AWS Global Infrastructure:
+The AWS Cloud spans 61 Availability Zones within 20 geographic regions around the world, with announced plans for 12 more Availability 
+Zones and four more AWS Regions in Bahrain, Cape Town, Hong Kong SAR, and Milan.
+
+  Regions: 
+  Availablity zones:
+  Edge locations:
+
+AWS Regions provide multiple (typically 3) physically separated and isolated Availability Zones which are connected with low latency,
+high throughput, and highly redundant networking. 
+These Availability Zones offer AWS customers an easier and more effective way to design and operate applications and databases, 
+making them more highly available, fault tolerant, and scalable than traditional singledatacenter infrastructures or multi-datacenter
+infrastructures.
+
+some Region & Number of Availability Zones
+
+US East
+N. Virginia (6),
+Ohio (3)
+
+US West
+N. California (3),
+Oregon (4)
+
+Asia Pacific
+Mumbai (2),
+Seoul (2),
+
+example
+
+US East (Ohio):
+Availability Zone Status:
+us-east-2a:
+Availability zone is operating normally
+us-east-2b:
+Availability zone is operating normally
+us-east-2c:
+Availability zone is operating normally
