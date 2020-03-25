@@ -109,7 +109,11 @@ You can view statistics for each of your Lambda functions via the Amazon CloudWa
 AWS Lambda automatically integrates with Amazon CloudWatch logs, creating a log group for each Lambda function and providing basic
 application lifecycle event log entries, including logging the resources consumed for each use of that function.
 You can easily insert additional logging statements into your code. You can also call third-party logging APIs in your Lambda function.
-
+25. How do I scale an AWS Lambda function?
+You do not have to scale your Lambda functions – AWS Lambda scales them automatically on your behalf. Every time an event notification 
+is received for your function, AWS Lambda quickly locates free capacity within its compute fleet and runs your code. 
+Since your code is stateless, AWS Lambda can start as many copies of your function as needed without lengthy deployment and configuration
+delays. There are no fundamental limits to scaling a function. AWS Lambda will dynamically allocate capacity to match the rate of incoming events.
 
 
 
