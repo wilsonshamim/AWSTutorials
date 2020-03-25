@@ -58,4 +58,59 @@ AWS IoT
 AWS IoT Events
 AWS CodePipeline
 
+11.  Can I access the infrastructure that AWS Lambda runs on?  No. AWS Lambda operates the compute infrastructure on your behalf, 
+allowing it to perform health checks, apply security patches, and do other routine maintenance.
+
+12. How does AWS Lambda isolate my code?
+Each AWS Lambda function runs in its own isolated environment, with its own resources and file system view. 
+AWS Lambda uses the same techniques as Amazon EC2 to provide security and separation at the infrastructure and execution levels.
+
+13. How does AWS Lambda secure my code?
+AWS Lambda stores code in Amazon S3 and encrypts it at rest. AWS Lambda performs additional integrity checks while your code is in use.
+14. Will AWS Lambda reuse function instances?
+To improve performance, AWS Lambda may choose to retain an instance of your function and reuse it to serve a subsequent request,
+rather than creating a new copy.
+
+15.  What if I need scratch space on disk for my AWS Lambda function?
+Each Lambda function receives 500MB of non-persistent disk space in its own /tmp directory.
+16. Why must AWS Lambda functions be stateless?
+Keeping functions stateless enables AWS Lambda to rapidly launch as many copies of the function as needed to scale to the rate of
+incoming events. While AWS Lambda’s programming model is stateless,your code can access stateful data by calling other web services,
+such as Amazon S3 or Amazon DynamoDB.
+
+17. Can I use threads and processes in my AWS Lambda function code?
+Yes. AWS Lambda allows you to use normal language and operating system features, such as creating additional threads and processes.
+Resources allocated to the Lambda function, including memory, execution time, disk, and network use, must be shared among all the
+threads/processes it uses. You can launch processes using any language supported by Amazon Linux.
+
+18. What restrictions apply to AWS Lambda function code?
+Inbound network connections are blocked by AWS Lambda, 
+outbound connections only TCP/IP and UDP/IP sockets are supported,
+ptrace (debugging) system calls are blocked.
+TCP port 25 traffic is also blocked as an anti-spam measure.
+
+19. How do I create an AWS Lambda function using the Lambda CLI?
+You can package the code (and any dependent libraries) as a ZIP and upload it using the AWS CLI from your local environment, 
+or specify an Amazon S3 location where the ZIP file is located. Uploads must be no larger than 50MB
+
+20. Does AWS Lambda support environment variables? Yes. 
+21.Can I store sensitive information in environment variables?
+For sensitive information, such as database passwords, we recommend you use client-side encryption using AWS Key Management Service and 
+store the resulting values as ciphertext in your environment variable.You will need to include logic in your AWS Lambda function code 
+to decrypt these values.
+22. Can I share code across functions?
+Yes, you can package any code (frameworks, SDKs, libraries, and more) as a Lambda Layer and manage and share them easily across multiple
+functions.
+23. How do I monitor an AWS Lambda function?
+AWS Lambda automatically monitors Lambda functions on your behalf, reporting real-time metrics through Amazon CloudWatch, including 
+total requests, account-level and function-level concurrency usage, latency, error rates, and throttled requests.
+You can view statistics for each of your Lambda functions via the Amazon CloudWatch console or through the AWS Lambda console. 
+24. How do I troubleshoot failures in an AWS Lambda function?
+AWS Lambda automatically integrates with Amazon CloudWatch logs, creating a log group for each Lambda function and providing basic
+application lifecycle event log entries, including logging the resources consumed for each use of that function.
+You can easily insert additional logging statements into your code. You can also call third-party logging APIs in your Lambda function.
+
+
+
+
 
