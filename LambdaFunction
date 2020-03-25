@@ -1,1 +1,19 @@
+How to Create Lambda Function:
+1. "Author from scratch"
+2. runtimes : Go, Java, nodejs, python, Ruby, .Net
+3. Choose Role
+4. in the configuration, there are below tabs
+  1. Designer
+  2. Function Code
+  3. environment variables.
+  4. tags
+  5. basic settings
+  6. VPC
+  7. Concurrency
+  8. Asynchronous invocation
+  9. Database proxies (preview)
+5. In the function code, we have 3 options.
+  1. EDIT code inline.
+  2. upload a zip file. use this option when you want to use a modules/libraries. say kafka module in pyhton code to be used.
+  3. if the zip file is grater then 10 MB, use upload a file from Amazon s3.
 
