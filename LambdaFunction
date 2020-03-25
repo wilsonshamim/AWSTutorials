@@ -17,3 +17,45 @@ How to Create Lambda Function:
   2. upload a zip file. use this option when you want to use a modules/libraries. say kafka module in pyhton code to be used.
   3. if the zip file is grater then 10 MB, use upload a file from Amazon s3.
 
+
+
+6. What is AWS lambda:  AWS lambda lets you run the code without provisioning or managing servers. we pay for only till the lambda 
+funtionis computed. There is no charge if the code isnt running.Lambda takes care of everything required to run and scale your code with 
+high availability. You can set up your code to automatically trigger from other AWS services or call it directly from any web or mobile app.
+7.  What is serverless computing: Serverless computing allows you to build and run applications and services without thinking about 
+servers.With serverless computing, your application still runs on servers, but all the server management is done by AWS. 
+At the core of serverless computing is AWS Lambda, which lets you run your code without provisioning or managing servers.
+8. Services That Lambda Reads Events From:
+Amazon Kinesis
+Amazon DynamoDB
+Amazon Simple Queue Service
+
+9. Services That Invoke Lambda Functions Synchronously: For synchronous invocation, the other service waits for the response from your 
+function and might retry on errors.
+Elastic Load Balancing (Application Load Balancer)
+Amazon Cognito
+Amazon Lex
+Amazon Alexa
+Amazon API Gateway
+Amazon CloudFront (Lambda@Edge)
+Amazon Kinesis Data Firehose
+AWS Step Functions
+Amazon Simple Storage Service Batch
+
+10. For asynchronous invocation, Lambda queues the event before passing it to your function. 
+The other service gets a success response as soon as the event is queued and isn't aware of what happens afterwards. 
+If an error occurs, Lambda handles retries, and can send failed events to a dead-letter queue that you configure.
+Services That Invoke Lambda Functions Asynchronously:
+Amazon Simple Storage Service
+Amazon Simple Notification Service
+Amazon Simple Email Service
+AWS CloudFormation
+Amazon CloudWatch Logs
+Amazon CloudWatch Events
+AWS CodeCommit
+AWS Config
+AWS IoT
+AWS IoT Events
+AWS CodePipeline
+
+
