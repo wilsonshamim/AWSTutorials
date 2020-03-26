@@ -12,6 +12,18 @@ These Availability Zones offer AWS customers an easier and more effective way to
 making them more highly available, fault tolerant, and scalable than traditional singledatacenter infrastructures or multi-datacenter
 infrastructures.
 
+Each Amazon Region is designed to be completely isolated from the other Amazon Regions. 
+This achieves the greatest possible fault tolerance and stability. 
+Each Availability Zone is isolated, but the Availability Zones in a Region are connected through low-latency links.
+AWS provides you with the flexibility to place instances and store data within multiple geographic regions as well as across multiple 
+Availability Zones within each AWS Region. 
+Each Availability Zone is designed as an independent failure zone. 
+This means that Availability Zones are physically separated within a typical metropolitan region and are located in lower risk flood
+plains (specific flood zone categorization varies by AWS Region). 
+In addition to discrete uninterruptable power supply(UPS) and onsite backup generation facilities, they are each fed via different 
+grids from independent utilities to further reduce single points of failure. Availability Zones are all redundantly connected to 
+multiple tier-1 transit providers.
+
 some Region & Number of Availability Zones
 
 US East
