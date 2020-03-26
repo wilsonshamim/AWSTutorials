@@ -1,1 +1,19 @@
+Benefits of AWS Security
+• Keep Your Data Safe: The AWS infrastructure puts strong safeguards in place to help protect your privacy. All data is stored in highly
+secure AWS data centers.
+• Meet Compliance Requirements: AWS manages dozens of
+compliance programs in its infrastructure. This means that segments of your compliance have already been completed.
+• Save Money: Cut costs by using AWS data centers. Maintain the highest standard of security without having to manage your own facility
+• Scale Quickly: Security scales with your AWS Cloud usage. No matter the size of your business, the AWS infrastructure is designed to 
+keep your data safe.
 
+Compliance
+AWS Cloud Compliance enables you to understand the robust controls in place at AWS to maintain security and data protection in the cloud.
+As systems are built on top of AWS Cloud infrastructure, compliance responsibilities will be shared. By tying together governance-focused, 
+audit-friendly service features with applicable compliance or audit standards, AWS Compliance enablers build on traditional programs.
+This helps customers to establish and operate in an AWS security control environment
+ The following is a partial list of assurance programs with which AWS complies:
+• SOC 1/ISAE 3402, SOC 2, SOC 3
+• FISMA, DIACAP, and FedRAMP
+• PCI DSS Level 1
+• ISO 9001, ISO 27001, ISO 27017, ISO 27018
