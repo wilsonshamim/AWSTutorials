@@ -44,7 +44,8 @@ Focus on projects that differentiate your business, not the infrastructure. Clou
 rather than on the heavy lifting of racking, stacking and powering servers.
 
 Go global in minutes
-Easily deploy your application in multiple regions around the world with just a few clicks. This means you can provide a lower latency and better experience for your customers simply and at minimal cost.
+Easily deploy your application in multiple regions around the world with just a few clicks. This means you can provide a lower latency 
+and better experience for your customers simply and at minimal cost.
 
 
 Types of Cloud Computing
@@ -53,3 +54,17 @@ Infrastructure as a Service (IaaS),
 Platform as a Service (PaaS), and 
 Software as a Service (SaaS).
 
+Cloud computing deployment mode:
+Cloud
+A cloud-based application is fully deployed in the cloud and all parts of the application run in the cloud. Applications in the cloud 
+have either been created in the cloud or have been migrated from an existing infrastructure to take advantage of the benefits of cloud computing.
+
+Hybrid
+A hybrid deployment is a way to connect infrastructure and applications between cloud-based resources and existing resources that are 
+not located in the cloud. The most common method of hybrid deployment is between the cloud and existing on-premises infrastructure to 
+extend, and grow, an organization's infrastructure into the cloud while connecting cloud resources to the internal system.
+
+On-premises
+The deployment of resources on-premises, using virtualization and resource management tools, is sometimes called the “private cloud.”
+On-premises deployment doesn’t provide many of the benefits of cloud computing but is sometimes sought for its ability to provide 
+dedicated resources.
