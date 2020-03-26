@@ -1,0 +1,34 @@
+AWS consists of many cloud services that you can use in combinations tailored to your business or organizational needs. 
+To access the services, you can use the AWS Management Console, the Command Line Interface, or Software Development Kits (SDKs).
+AWS Management Console
+Access and manage Amazon Web Services through the AWS Management Console, a simple and intuitive user interface. You can also use the AWS
+Console Mobile Application to quickly view resources on the go.
+AWS Command Line Interface
+The AWS Command Line Interface (CLI) is a unified tool to manage your AWS services. With just one tool to download and configure, you can 
+control multiple AWS services from the command line and automate them through scripts.
+Software Development Kits
+Our Software Development Kits (SDKs) simplify using AWS services in your applications with an Application Program Interface (API) tailored
+to your programming language or platform.
+
+Analytics
+Amazon Athena:
+Amazon Athena is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL.
+Athena is serverless, so there is no infrastructure to manage, and you pay only for the queries that you run.
+Athena is easy to use. Simply point to your data in Amazon S3, define the schema, and start querying using standard SQL.
+Most results are delivered within seconds.
+With Athena, there’s no need for complex extract, transform, and load (ETL) jobs to prepare your data for analysis. This makes it easy for
+anyone with SQL skills to quickly analyze large-scale datasets.
+Athena is out-of-the-box integrated with AWS Glue Data Catalog, allowing you to create a unified metadata repository across various 
+services, crawl data sources to discover schemas and populate your Catalog with new and modified table and partition definitions, and
+maintain schema versioning. 
+
+Amazon EMR:
+Amazon EMR provides a managed Hadoop framework that makes it easy, fast, and cost-effective to process vast amounts of data across
+dynamically scalable Amazon EC2 instances. 
+You can also run other popular distributed frameworks such as Apache Spark, HBase, Presto, and Flink in Amazon EMR, and interact
+with data in other AWS data stores such as Amazon S3 and Amazon DynamoDB.
+EMR Notebooks, based on the popular Jupyter Notebook, provide a development and collaboration environment for ad hoc querying and
+exploratory analysis.
+Amazon EMR securely and reliably handles a broad set of big data use cases, including log analysis, web indexing, data transformations
+(ETL), machine learning, financial analysis, scientific simulation, and bioinformatics.
+
