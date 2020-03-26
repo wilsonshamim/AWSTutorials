@@ -32,3 +32,16 @@ exploratory analysis.
 Amazon EMR securely and reliably handles a broad set of big data use cases, including log analysis, web indexing, data transformations
 (ETL), machine learning, financial analysis, scientific simulation, and bioinformatics.
 
+Amazon CloudSearch
+Amazon CloudSearch is a managed service in the AWS Cloud that makes it simple and cost-effective to set up, manage, and scale a search 
+solution for your website or application. Amazon CloudSearch supports 34 languages and popular search features such as highlighting, 
+autocomplete, and geospatial
+
+Amazon Elasticsearch Service
+Amazon Elasticsearch Service makes it easy to deploy, secure, operate, and scale Elasticsearch to search, analyze, and visualize data
+in real-time. With Amazon Elasticsearch Service, you get easy-to-use APIs and real-time analytics capabilities to power use-cases such 
+as log analytics, full-text search, application monitoring, and clickstream analytics, with enterprise-grade availability, scalability,
+and security. The service offers integrations with opensource tools like Kibana and Logstash for data ingestion and visualization. It
+also integrates seamlessly with other AWS services such as Amazon Virtual Private Cloud (Amazon VPC), AWS Key Management System (AWS KMS),
+Amazon Kinesis Data Firehose, AWS Lambda, AWS Identity and Access Management (IAM), Amazon Cognito, and Amazon CloudWatch, so that you
+can go from raw data to actionable insights quickly.
