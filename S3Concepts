@@ -24,6 +24,11 @@ Buckets holds objects. buckets can have folders which in turn holds objects.
 
 S3 is the universal namespace. so buckets names must be unique (think like haveing a domain name)
 
+when you upload a file you will recieve staus code as 200.
+
+MFA Delete = it enforce delete operations to require MFA token in order o delete an object.must have versioing turned on to use.
+Can only trun on MFA delete from the AWS cli. root account is only allowed to delete the objects.
+
 Storage classes
 Standard (default) = 99.999% Availability, fast and replicated among 3 availability zones
 Intelligent Tiering = Stored objects are analyzed via machine learning to decide which storage class is used automatically. In the end 
@@ -38,7 +43,8 @@ Glacier Deep Archive = Cheapest storage, but up to 12 hours for object access.
 Security
 Public/Private = New created Buckets are private by default (Block all public acces in the UI)!
 Logging = Every request to a Bucket can be logged. The log files are stored in a different S3 Bucket :), even different AWS account is 
-possible.
+possible. Logging can be truned to on a object to log to track operations performed on objects.
+
 Access control = Managed by Bucket policies:
 Allow read only access for anonymous users:
 {
@@ -83,6 +89,7 @@ Deleting an object inserts a delete marker and you get a 404 response if you wan
 
 If versioning is enabled you can only suspend it, so existing versions stay
 Multi factor authentication is supported to delete a version of an object. Works only with versioning.
+
 Object Lifecycle Management
 Automate the process of changing the storage class or deleting objects e.g. move to Glacier after 365 days
 Works with versioning (Use current and/or previous versions)
