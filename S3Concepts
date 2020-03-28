@@ -100,3 +100,22 @@ the console you can do it like this:
 aws s3 presign s3://awsexamplebucket/test.txt --expires-in 600
 The output url will look like this:
 https://awsexamplebucket.s3.amazonaws.com/test.txt?AWSAccessKeyId=AKIAEXAMPLEACCESSKEY&Signature=EXHCcBe%EXAMPLEKnz3r8O0AgEXAMPLE&Expires=1555531131
+
+
+aws cli
+
+1. download all files 
+aws s3 sync s3://bucketname/foldername1/foldername2/ . 
+
+2. list all s3 files
+aws s3 ls s3://bucketname/foldername1/foldername2/
+
+3. download a single file from s3
+aws s3 cp s3://bucketname/foldrname/test.json .
+
+4. upload a file to s3
+aws s3 cp test_1.json s3://bucketname/foldrname/ 
+
+
+
+
