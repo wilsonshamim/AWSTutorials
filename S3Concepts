@@ -1,1 +1,28 @@
+Simple storage service(S3):
+1. object based storage service.
+2. Serverless storage in the cloud.
+3. dont worry about filesystem or disk space.
+
+what is object storage or object based storage:
+its a data sotrage archicture that manage data as objects as opposed to other storage like 
+file systems which manage data as files and hirarchy.
+and block storage which manages data as blocks within sectors and tracks.
+
+S3 provide an unlimited storage.
+S3 console provides an interface to upload and access data.
+
+S3 objects:
+objects contains the data. they are like files. S3 can store data from 0 B to 5TB in size.
+object may consists of 
+1. key: name of the object
+2. value: the data itself made up of sequence of bytes.
+3. version id:  when versioning enabled, version of the object.
+4. metadata: additional information attached to the object.
+
+S3 Buckets:
+Buckets holds objects. buckets can have folders which in turn holds objects.
+
+S3 is the universal namespace. so buckets names must be unique (think like haveing a domain name)
+
+
 
