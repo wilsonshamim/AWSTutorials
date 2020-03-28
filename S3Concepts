@@ -24,5 +24,79 @@ Buckets holds objects. buckets can have folders which in turn holds objects.
 
 S3 is the universal namespace. so buckets names must be unique (think like haveing a domain name)
 
+Storage classes
+Standard (default) = 99.999% Availability, fast and replicated among 3 availability zones
+Intelligent Tiering = Stored objects are analyzed via machine learning to decide which storage class is used automatically. In the end 
+the most cost effective tiering is used for your data without any additional overhead
+Standard Infrequently Accessed = Cheap for objects that don’t get accessed more than once in a month. Amazon applies additional 
+retrieval fee.
+One Zone Infrequent Access = Objects are stored only in one availability zone with a lower availability(99.5%). Additional retrieval 
+fee is applied. Cheaper than Standard IA.
+Glacier = Long term cold storage: Cheap and it can take minutes to hours to read objects.
+Glacier Deep Archive = Cheapest storage, but up to 12 hours for object access.
+
+Security
+Public/Private = New created Buckets are private by default (Block all public acces in the UI)!
+Logging = Every request to a Bucket can be logged. The log files are stored in a different S3 Bucket :), even different AWS account is 
+possible.
+Access control = Managed by Bucket policies:
+Allow read only access for anonymous users:
+{
+   "Version":"2012-10-17",
+   "Statement":[
+      {
+         "Sid":"PublicRead",
+         "Effect":"Allow",
+         "Principal":"*",
+         "Action":[
+            "s3:GetObject"
+         ],
+         "Resource":[
+            "arn:aws:s3:::examplebucket/*"
+         ]
+      }
+   ]
+}
+You can generate Bucket policies with the AWS policy generator UI: https://awspolicygen.s3.amazonaws.com/policygen.html
+Encryption
+Traffic(Requests) between your client and the Bucket are encrypted via SSL/TLS.
+To encrypt your objects you can do it on the client side and upload already encrpyted files or use server side encryption from AWS:
+
+SSE Encryption by AWS
+SSE-AES: AWS manages the key and uses the advanced encryption Standard with a block size of 256 bits.
+SSE-KMS: Envelope encryption, your key is encrypted by another key and you and AWS KMS manage the keys.
+SSE-C: Client/Customer provides the key
+Data consistency
+New objects PUTS (Read after write consistency)= After uploading a new object you can read it immediately after writing
+Overwrite or Delete (Eventual consistency) = S3 needs to replicate the changes to multiple availability zones. You might get an old 
+object if you read it immediately after writing.
+Cross Region Replication
+Higher durability, because an uploaded object is automatically replicated to another region e.g. upload to us-east-1 and replicates to 
+eu-central-1. Versioning needs to be enabled on the source and the destination region! Replicating from the US to another region in 
+Europe can minimize the access latency for customers sitting in Europe for example.
 
 
+Versioning
+
+Overwriting an object creates a new version and you can restore the previous if necessary
+Deleting an object inserts a delete marker and you get a 404 response if you want to access the object now
+
+If versioning is enabled you can only suspend it, so existing versions stay
+Multi factor authentication is supported to delete a version of an object. Works only with versioning.
+Object Lifecycle Management
+Automate the process of changing the storage class or deleting objects e.g. move to Glacier after 365 days
+Works with versioning (Use current and/or previous versions)
+Delete all files after 20 days
+Transfer Acceleration
+When you upload large files across continents you can upload the data to an Edge location(Distinct URL) of CloudFront and AWS routes 
+the data 
+internally over an optimized network path(Amazon backbone network) to the S3 Bucket.
+The s3 accelerated domain name looks like this:
+bucketname.s3-accelerate.amazonaws.com
+Presigned URLs
+Enables temporary access to update or download an object. Imagine a login area of your application where users can download a file and 
+you can generate a presigned url that gives temporary access for 10 seconds without the need of any AWS credentials for the user. With 
+the console you can do it like this:
+aws s3 presign s3://awsexamplebucket/test.txt --expires-in 600
+The output url will look like this:
+https://awsexamplebucket.s3.amazonaws.com/test.txt?AWSAccessKeyId=AKIAEXAMPLEACCESSKEY&Signature=EXHCcBe%EXAMPLEKnz3r8O0AgEXAMPLE&Expires=1555531131
